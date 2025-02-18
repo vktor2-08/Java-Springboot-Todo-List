@@ -2,7 +2,6 @@ package com.internship.Todo_List.service_layer;
 
 import com.internship.Todo_List.models.TodoTask;
 import com.internship.Todo_List.repository.TodoRepo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
