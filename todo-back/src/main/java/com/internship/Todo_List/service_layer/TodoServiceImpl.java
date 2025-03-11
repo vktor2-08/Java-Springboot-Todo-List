@@ -52,4 +52,8 @@ public class TodoServiceImpl implements TodoService {
         }
         return false; // Return false if not found
     }
+    
+    public TodoTask createTask(TodoTask task) {
+        return todoRepo.save(task); // Saves the task to the database
+    }
 }

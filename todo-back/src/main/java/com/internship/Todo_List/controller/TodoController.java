@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping ("/api/todos")
+@CrossOrigin(origins = "http://localhost:3000")
 public class TodoController {
 
     private final TodoService todoService;
@@ -60,4 +61,13 @@ public class TodoController {
         }
     }
 
+    @GetMapping
+    public List<TodoTask> getAllTasks() {
+        return todoService.getAllTodos(); // Calls service layer
+    }
+
+    @PostMapping
+    public TodoTask createTask(@RequestBody TodoTask newTask) {
+        return todoService.createTodo(newTask);
+    }
 }
